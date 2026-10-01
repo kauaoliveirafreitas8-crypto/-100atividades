@@ -1,0 +1,8 @@
+{
+  "name": "+100 Atividades de Natal Para Crianças",
+  "description": "Mais de 100 atividades natalinas prontas para imprimir para crianças de 3 a 10 anos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

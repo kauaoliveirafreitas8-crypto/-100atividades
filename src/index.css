@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-gold: #F59E0B;
+  --color-brand-gold-dark: #D97706;
+  --color-brand-red: #C4151C;
+  --color-brand-dark: #1A2E26;
+  --color-brand-green: #00C853;
+  --color-brand-navy: #1A2E26;
+  --color-brand-teal: #00C853;
+  --color-brand-teal-dark: #009E40;
+  --color-brand-teal-light: #FFFBEB;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes scroll-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-x-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 26s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll-x-reverse {
+  animation: scroll-x-reverse 26s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll-x:hover,
+.animate-scroll-x:active,
+.animate-scroll-x-reverse:hover,
+.animate-scroll-x-reverse:active {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar and smooth details animation */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}

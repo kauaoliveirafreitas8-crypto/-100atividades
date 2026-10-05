@@ -829,7 +829,7 @@ export default function App() {
 
             <div>
               <a
-                href="https://checkout.payt.com.br/a735af4971cfc7c1e31bc3cbe493485d"
+                href="https://pay.lowify.com.br/checkout?product_id=XOjJjt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-[#00C853] hover:bg-[#00B248] text-white font-black text-sm sm:text-base py-3.5 sm:py-4 rounded-xl sm:rounded-2xl active:scale-95 transition-all shadow-lg shadow-green-600/25 cursor-pointer"
@@ -1001,7 +1001,7 @@ export default function App() {
 
               {/* Button CTA - Color & text preserved */}
               <a
-                href="https://checkout.payt.com.br/bb0528eaebdf5520889335d52d323882"
+                href="https://pay.lowify.com.br/checkout?product_id=fSNTi3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-[#00C853] hover:bg-[#00B248] text-white font-black text-base sm:text-lg md:text-xl py-4 sm:py-4.5 rounded-xl sm:rounded-2xl active:scale-95 transition-all shadow-xl shadow-green-600/30 animate-pulse tracking-wide cursor-pointer"

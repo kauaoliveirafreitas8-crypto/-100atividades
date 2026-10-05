@@ -17,6 +17,8 @@ import {
   ArrowRight,
   CircleCheck,
   ChevronDown,
+  X,
+  ShieldCheck,
 } from 'lucide-react';
 
 const carouselImagesSet1 = [
@@ -376,102 +378,92 @@ export default function App() {
         </span>
       </aside>
 
-      {/* Security Badge */}
-      <div className="flex justify-center mt-4 sm:mt-5 px-3">
-        <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 border border-emerald-300 rounded-full px-3.5 sm:px-4 py-1 text-[11px] sm:text-xs md:text-sm font-black tracking-tight shadow-xs text-center">
-          <Lock className="size-3.5 sm:size-4 shrink-0 text-[#00C853]" /> COMPRA 100% SEGURA &bull; ACESSO IMEDIATO
-        </span>
-      </div>
-
       {/* Hero Section */}
-      <section className="max-w-5xl mx-auto px-3 sm:px-4 pt-5 sm:pt-7 pb-8 sm:pb-12 text-center">
-        <div className="inline-block max-w-full">
-          <p className="text-[11px] sm:text-xs md:text-sm font-black tracking-[0.2em] sm:tracking-[0.35em] text-brand-red uppercase mb-2 sm:mb-3">
-            🎄 ESPECIAL DE NATAL 2026 🎄
+      <section className="relative overflow-hidden pt-4 sm:pt-6 pb-7 sm:pb-9 text-center bg-gradient-to-b from-[#FFFDF9] via-white to-[#F8FBF9] border-b border-emerald-950/10">
+        <div className="max-w-5xl mx-auto px-3 sm:px-4">
+          {/* Security Badge */}
+          <div className="flex justify-center mb-3 sm:mb-4">
+            <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-800 border border-emerald-300 rounded-full px-3.5 sm:px-4 py-1 text-[11px] sm:text-xs md:text-sm font-black tracking-tight shadow-xs text-center">
+              <Lock className="size-3.5 sm:size-4 shrink-0 text-[#00C853]" /> COMPRA 100% SEGURA
+            </span>
+          </div>
+
+          <div className="inline-block max-w-full">
+            <h1
+              className="text-2xl min-[360px]:text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.12] sm:leading-[0.98] tracking-tight text-balance px-1 text-brand-red drop-shadow-xs"
+            >
+              +100 Atividades de Natal para Crianças de 3 a 7 Anos
+            </h1>
+            <div className="mt-2.5 sm:mt-3 mx-auto h-1.5 w-20 sm:w-36 bg-gradient-to-r from-amber-400 via-brand-red to-[#00C853] rounded-full"></div>
+          </div>
+
+          <h2 className="mt-3 sm:mt-4 text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-neutral-800 text-balance px-1 leading-snug">
+            Atividades educativas <span className="bg-amber-100 text-brand-red font-black px-2 py-0.5 rounded-md border border-amber-300/60 inline-block">prontas para imprimir</span> e usar em casa ou na sala de aula, sem perder horas procurando ou preparando materiais.
+          </h2>
+
+          <div className="relative my-3 sm:my-5 flex justify-center -mx-2 sm:mx-0">
+            <img
+              src="https://i.ibb.co/MK4YvCD/mockup-principal.webp"
+              alt="+100 Atividades de Natal para Crianças de 3 a 7 Anos"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full max-w-full sm:max-w-4xl lg:max-w-5xl object-contain drop-shadow-xl"
+            />
+          </div>
+
+          <p className="text-sm sm:text-base md:text-lg text-neutral-700 max-w-2xl mx-auto px-1 leading-relaxed">
+            São mais de 100 atividades com desenhos para colorir, labirintos, caça-palavras, alfabetização, matemática, recorte, colagem e muito mais.
           </p>
-          <h1
-            className="text-2xl min-[360px]:text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.12] sm:leading-[0.98] tracking-tight text-balance px-1 text-brand-red drop-shadow-xs"
-          >
-            +100 Atividades de Natal para Crianças de 3 a 7 Anos
-          </h1>
-          <div className="mt-3 sm:mt-4 mx-auto h-1.5 w-20 sm:w-36 bg-gradient-to-r from-amber-400 via-brand-red to-[#00C853] rounded-full"></div>
-        </div>
 
-        <h2 className="mt-4 sm:mt-6 text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-neutral-800 text-balance px-1 leading-snug">
-          Atividades educativas <span className="bg-amber-100 text-brand-red font-black px-2 py-0.5 rounded-md border border-amber-300/60 inline-block">prontas para imprimir</span> e usar em casa ou na sala de aula, sem perder horas procurando ou preparando materiais.
-        </h2>
+          <div className="mt-4 sm:mt-6 px-2">
+            <a href="#oferta" className={btnCtaLarge}>
+              QUERO AS +100 ATIVIDADES →
+            </a>
+          </div>
 
-        <div className="relative my-4 sm:my-8 flex justify-center -mx-2 sm:mx-0">
-          <img
-            src="https://i.ibb.co/MK4YvCD/mockup-principal.webp"
-            alt="+100 Atividades de Natal para Crianças de 3 a 7 Anos"
-            fetchPriority="high"
-            decoding="async"
-            className="w-full max-w-full sm:max-w-4xl lg:max-w-5xl object-contain drop-shadow-xl"
-          />
-        </div>
-
-        <p className="text-sm sm:text-base md:text-lg text-neutral-700 max-w-2xl mx-auto px-1 leading-relaxed">
-          São mais de 100 atividades com desenhos para colorir, labirintos, caça-palavras, alfabetização, matemática, recorte, colagem e muito mais.
-        </p>
-
-        <p className="mt-3 text-sm sm:text-base md:text-lg font-bold text-neutral-900 max-w-2xl mx-auto px-1 leading-relaxed">
-          Basta <span className="bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded font-black">escolher, imprimir e entregar</span> para as crianças — em casa ou na sala de aula.
-        </p>
-
-        <div className="mt-6 sm:mt-8 px-2">
-          <a href="#oferta" className={btnCtaLarge}>
-            QUERO AS +100 ATIVIDADES →
-          </a>
-        </div>
-
-        <div className="mt-4 sm:mt-6 text-xs sm:text-sm md:text-base font-semibold text-neutral-700 flex items-center justify-center gap-1.5 flex-wrap px-2">
-          <span>Você recebe <strong className="text-emerald-700 font-black">acesso imediato</strong> após a compra para consultar pelo</span>
-          <span className="inline-flex items-center gap-1 text-brand-red font-black">
-            <Smartphone className="size-4" /> celular, tablet
-          </span>
-          <span>ou</span>
-          <span className="inline-flex items-center gap-1 text-brand-red font-black">
-            <Monitor className="size-4" /> computador.
-          </span>
+          <div className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base font-semibold text-neutral-700 flex items-center justify-center gap-1.5 flex-wrap px-2">
+            <span>Você recebe <strong className="text-emerald-700 font-black">acesso imediato</strong> após a compra para consultar pelo</span>
+            <span className="inline-flex items-center gap-1 text-brand-red font-black">
+              <Smartphone className="size-4" /> celular, tablet
+            </span>
+            <span>ou</span>
+            <span className="inline-flex items-center gap-1 text-brand-red font-black">
+              <Monitor className="size-4" /> computador.
+            </span>
+          </div>
         </div>
       </section>
 
       {/* Section 2: Clinical Conditions */}
-      <section className="py-8 sm:py-12 bg-brand-red">
-        <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-black text-center mb-6 sm:mb-8 text-white leading-tight">
-            Veja algumas das <span className="text-brand-gold">atividades de Natal</span> que você encontrará
+      <section className="py-12 sm:py-20 bg-gradient-to-b from-[#F0FAF4] via-[#F6FCF8] to-[#EBF6F0] border-b border-emerald-200/80">
+        <div className="max-w-5xl mx-auto px-4 mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-center text-neutral-900 leading-tight">
+            Veja algumas das <span className="text-brand-red">Atividades de Natal</span>
           </h2>
-
-          <img
-            src="https://i.ibb.co/zVbwCp5J/ca.webp"
-            alt="Exemplos de atividades de Natal para crianças"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            className="w-full max-w-sm sm:max-w-xl md:max-w-3xl mx-auto mb-6 sm:mb-8 rounded-2xl sm:rounded-3xl shadow-xl object-contain"
-          />
         </div>
 
         <ScrollingMarquee imgs={carouselImagesSet1} priority={true} />
 
-        <div className="max-w-4xl mx-auto px-4 mt-8 sm:mt-10 text-center text-white">
-          <p className="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-white/95">
+        <div className="max-w-4xl mx-auto px-4 mt-8 sm:mt-10 text-center">
+          <p className="text-base sm:text-lg font-bold mb-4 sm:mb-6 text-neutral-800">
             Mais de 100 atividades natalinas prontas para imprimir — incluindo:
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 mb-6 sm:mb-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4.5 mb-6 sm:mb-8">
             {conditions.map((item) => (
               <div
                 key={item.title}
-                className="bg-white p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 text-left flex flex-col justify-start"
+                className="bg-white p-4 sm:p-5 rounded-2xl shadow-sm hover:shadow-xl border border-emerald-200/80 hover:border-brand-red/50 hover:-translate-y-1.5 transition-all duration-300 text-left flex flex-col justify-start relative group"
               >
-                <div className="text-xl sm:text-2xl mb-1.5 leading-none" role="img" aria-hidden="true">
+                <div
+                  className="size-12 rounded-xl bg-gradient-to-br from-emerald-50 to-amber-50 border border-emerald-200/80 shadow-2xs flex items-center justify-center text-2xl mb-2.5 group-hover:scale-110 transition-transform"
+                  role="img"
+                  aria-hidden="true"
+                >
                   {item.icon}
                 </div>
-                <p className="text-xs sm:text-sm font-extrabold text-brand-dark mb-1 leading-snug">{item.title}</p>
-                <p className="text-[11px] sm:text-xs text-brand-dark/70 leading-relaxed">{item.desc}</p>
+                <p className="text-xs sm:text-sm font-black text-brand-red uppercase mb-1 leading-snug tracking-tight">{item.title}</p>
+                <p className="text-[11px] sm:text-xs text-neutral-700 leading-relaxed font-medium">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -485,9 +477,9 @@ export default function App() {
       </section>
 
       {/* Section 3: Clinical Photos Carousel */}
-      <section className="py-6 sm:py-10 bg-white border-y border-gray-100">
+      <section className="py-7 sm:py-11 bg-white border-b border-neutral-200/60">
         <div className="text-center mb-4 px-4">
-          <p className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-brand-dark/50">
+          <p className="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-emerald-900/70">
             DIVERSÃO E APRENDIZADO NA PRÁTICA
           </p>
         </div>
@@ -495,42 +487,40 @@ export default function App() {
       </section>
 
       {/* Section 4: What makes them valuable */}
-      <section className="py-10 sm:py-14 px-4 bg-brand-red">
-        <h2 className="text-lg sm:text-2xl md:text-4xl font-black text-center mb-6 sm:mb-10 uppercase text-white leading-snug">
-          O QUE TORNA AS +100 ATIVIDADES DE NATAL TÃO ESPECIAIS?
-        </h2>
+      <section className="py-12 sm:py-20 px-4 bg-gradient-to-b from-[#FFFDF2] via-[#FFF9E8] to-[#FFF3D6] border-b border-amber-300/80">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-center mb-8 sm:mb-12 uppercase text-neutral-900 leading-tight">
+            O QUE TORNA AS <span className="text-brand-red">+100 ATIVIDADES DE NATAL</span> TÃO ESPECIAIS?
+          </h2>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-6">
-          {reasons.map((item) => (
-            <div
-              key={item.title}
-              className="bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 flex gap-3.5 sm:gap-4 items-start"
-            >
-              <div className="shrink-0 text-3xl sm:text-4xl leading-none mt-0.5">{item.icon}</div>
-              <div>
-                <h3 className="font-extrabold text-base sm:text-lg mb-1 text-brand-red leading-snug">{item.title}</h3>
-                <p className="text-brand-dark/80 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            {reasons.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white p-6 sm:p-7 rounded-3xl shadow-md hover:shadow-2xl border border-amber-300/80 hover:border-amber-400 hover:-translate-y-1.5 transition-all duration-300 flex gap-4 items-start relative overflow-hidden group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-red via-amber-400 to-[#00C853]" />
+                <div className="shrink-0 size-14 rounded-2xl bg-gradient-to-br from-red-50 to-amber-50 border-2 border-red-200/70 shadow-sm flex items-center justify-center text-3xl group-hover:scale-105 transition-transform">
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="font-black text-base sm:text-lg mb-1 text-brand-red leading-snug">{item.title}</h3>
+                  <p className="text-neutral-700 text-xs sm:text-sm leading-relaxed font-normal">{item.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Section 5: Need Organization Notice */}
-      <section className="bg-white">
-        <div className="bg-red-600 text-white py-4 sm:py-6 px-4 text-center shadow-inner">
-          <h2 className="text-sm xs:text-base sm:text-xl md:text-2xl font-black flex items-center justify-center gap-2 flex-wrap leading-tight">
-            <Clock className="size-4 sm:size-6 shrink-0" />
-            <span>AS CRIANÇAS QUEREM SE DIVERTIR — MAS NEM SEMPRE É FÁCIL ENCONTRAR BOAS ATIVIDADES</span>
-          </h2>
-        </div>
-
-        <div className="px-4 py-8 sm:py-12">
-          <div className="max-w-2xl mx-auto rounded-2xl sm:rounded-3xl p-6 sm:p-10 text-center text-white shadow-xl bg-brand-dark border border-white/10">
-            <p className="text-lg xs:text-xl sm:text-3xl md:text-4xl font-black mb-3 leading-tight">
+      <section className="border-b border-neutral-300/70">
+        <div className="px-4 py-10 sm:py-16 bg-gradient-to-b from-[#FAF7F2] via-[#F4EFEA] to-[#ECE5DC]">
+          <div className="max-w-2xl mx-auto rounded-3xl p-6 sm:p-10 text-center text-white shadow-2xl bg-gradient-to-br from-[#1A2E26] via-[#15251F] to-[#0E1A15] border border-emerald-900/40">
+            <p className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-black mb-3 leading-tight tracking-tight">
               PARE DE PROCURAR ATIVIDADES ESPALHADAS
             </p>
-            <p className="text-xs sm:text-base md:text-xl mb-6 text-white/90 leading-relaxed">
+            <p className="text-xs sm:text-base md:text-lg mb-6 text-neutral-300 leading-relaxed font-normal">
               Tenha uma coleção completa de atividades natalinas organizada e pronta para usar na escola, em casa ou durante as férias.
             </p>
             <a href="#oferta" className={btnCtaLarge}>
@@ -541,9 +531,9 @@ export default function App() {
       </section>
 
       {/* Section 6: Protocol Examples Scrolling Carousel */}
-      <section className="py-6 sm:py-10 bg-white">
+      <section className="py-7 sm:py-11 bg-white border-b border-neutral-200/60">
         <div className="text-center mb-3 px-4">
-          <span className="text-xs font-bold tracking-wider text-brand-dark/60 uppercase">
+          <span className="text-xs font-bold tracking-wider text-neutral-600 uppercase">
             ATIVIDADES ILUSTRADAS E PRONTAS PARA IMPRIMIR
           </span>
         </div>
@@ -551,31 +541,39 @@ export default function App() {
       </section>
 
       {/* Section 7: Ideal For You Who Wants */}
-      <section className="py-10 sm:py-14 px-4 bg-brand-red">
-        <h2 className="text-lg sm:text-2xl md:text-4xl font-black text-center mb-6 sm:mb-10 uppercase text-white leading-snug">
-          IDEAL PARA VOCÊ QUE DESEJA:
-        </h2>
+      <section className="py-12 sm:py-20 px-4 bg-gradient-to-b from-[#FFF5F5] via-[#FFF0F2] to-[#FFE8EC] border-b border-rose-200/80">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-xs sm:text-sm font-black tracking-widest text-brand-red uppercase mb-2 text-center">
+            PENSADO PARA FACILITAR SUA VIDA
+          </p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-center mb-8 sm:mb-12 uppercase text-neutral-900 leading-tight">
+            IDEAL PARA VOCÊ QUE <span className="text-brand-red">DESEJA:</span>
+          </h2>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-6">
-          {desires.map((item) => (
-            <div
-              key={item.title}
-              className="bg-white p-4 sm:p-6 rounded-xl sm:rounded-2xl shadow flex gap-3.5 sm:gap-4 items-start"
-            >
-              <div className="shrink-0 text-3xl sm:text-4xl leading-none mt-0.5">{item.icon}</div>
-              <div>
-                <h3 className="font-extrabold uppercase text-brand-dark text-xs sm:text-sm md:text-base mb-1 leading-snug">
-                  {item.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-brand-dark/75 leading-relaxed">{item.desc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            {desires.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white p-6 sm:p-7 rounded-3xl shadow-md hover:shadow-2xl border border-rose-200/80 hover:border-brand-red/60 hover:-translate-y-1.5 transition-all duration-300 flex gap-4 items-start relative overflow-hidden group"
+              >
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-red to-rose-400" />
+                <div className="shrink-0 size-14 rounded-2xl bg-gradient-to-br from-rose-50 to-red-100/70 border-2 border-rose-200/80 shadow-sm flex items-center justify-center text-3xl group-hover:scale-105 transition-transform">
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="font-black uppercase text-neutral-900 text-xs sm:text-sm md:text-base mb-1 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed font-medium">{item.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Section 8: Everything You Will Receive */}
-      <section className="py-10 sm:py-16 px-4 bg-[#F8FAF7] text-center">
+      <section className="py-12 sm:py-18 px-4 bg-gradient-to-b from-[#F2F6F4] via-[#EAF1EE] to-[#E2ECE7] border-b border-emerald-900/10 text-center">
         <div className="max-w-4xl mx-auto">
           <p className="text-xs sm:text-sm font-black tracking-widest text-[#00C853] uppercase mb-2">
             CONTEÚDO COMPLETO E ESTRUTURADO
@@ -584,7 +582,7 @@ export default function App() {
             TUDO O QUE VOCÊ VAI RECEBER
           </h2>
 
-          <div className="max-w-2xl sm:max-w-3xl mx-auto rounded-2xl sm:rounded-3xl p-4 sm:p-8 border-2 border-amber-400 bg-brand-dark shadow-2xl">
+          <div className="max-w-2xl sm:max-w-3xl mx-auto rounded-3xl p-5 sm:p-8 border border-neutral-800 bg-gradient-to-br from-[#1A2E26] via-[#15251F] to-[#0E1A15] shadow-2xl">
             <div className="flex justify-center mb-3">
               <span className="inline-flex items-center gap-1.5 bg-[#00C853] text-white rounded-full px-4 py-1.5 text-xs sm:text-sm font-black shadow-md tracking-wide">
                 <Zap className="size-3.5 sm:size-4 fill-white" /> ACESSO IMEDIATO APÓS A COMPRA
@@ -598,7 +596,7 @@ export default function App() {
               className="w-full max-w-full sm:max-w-2xl mx-auto my-3 sm:my-5 object-contain drop-shadow-md"
             />
 
-            <ul className="max-w-md mx-auto space-y-2.5 sm:space-y-3 text-left text-white border-t border-amber-400/30 pt-4">
+            <ul className="max-w-md mx-auto space-y-2.5 sm:space-y-3 text-left text-white border-t border-emerald-500/30 pt-4">
               {[
                 '+100 Atividades de Natal para Crianças de 3 a 7 Anos',
                 'Atividades educativas, alegres e envolventes',
@@ -621,7 +619,7 @@ export default function App() {
               ))}
             </ul>
 
-            <div className="mt-5 pt-2 grid grid-cols-2 gap-2 text-xs sm:text-sm font-bold text-white/95 text-left bg-black/30 p-3.5 rounded-xl border border-white/10">
+            <div className="mt-5 pt-2 grid grid-cols-2 gap-2 text-xs sm:text-sm font-bold text-white/95 text-left bg-black/40 p-3.5 rounded-2xl border border-white/10">
               <p>🖍️ Desenhos para colorir</p>
               <p>🦌 Labirintos de Natal</p>
               <p>🔔 Caça-palavras natalinos</p>
@@ -636,128 +634,128 @@ export default function App() {
       </section>
 
       {/* Section 9: Exclusive Bonuses */}
-      <section className="py-10 sm:py-16 px-4 bg-brand-red text-white text-center">
-        <h2 className="text-xl sm:text-3xl md:text-5xl font-black mb-1 sm:mb-2 uppercase leading-tight">
+      <section className="py-12 sm:py-18 px-4 bg-gradient-to-b from-[#FFFDF5] via-[#FFF8E6] to-[#FFF2D4] border-b border-amber-300/80 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-black mb-1 sm:mb-2 uppercase leading-tight text-neutral-900">
           E NÃO PARA POR AÍ…
         </h2>
-        <p className="text-sm sm:text-lg md:text-xl font-bold mt-2 sm:mt-3 mb-4 text-amber-200">
+        <p className="text-sm sm:text-lg md:text-xl font-bold mt-2 sm:mt-3 mb-4 text-brand-red">
           Garantindo sua vaga hoje, você leva 4 super bônus de presente:
         </p>
 
-        <div className="flex justify-center mb-6 sm:mb-10">
-          <span className="inline-flex items-center gap-1.5 bg-[#00C853] text-white rounded-full px-5 sm:px-6 py-2 text-xs sm:text-sm md:text-base font-black shadow-lg">
+        <div className="flex justify-center mb-8 sm:mb-12">
+          <span className="inline-flex items-center gap-1.5 bg-[#00C853] text-white rounded-full px-5 sm:px-6 py-2 text-xs sm:text-sm md:text-base font-black shadow-md">
             🎁 4 BÔNUS EXCLUSIVOS 100% GRÁTIS
           </span>
         </div>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Bonus 1 */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl text-neutral-900 text-left shadow-xl flex flex-col justify-between border-2 border-amber-300">
+          <div className="bg-white p-5 sm:p-6 rounded-3xl text-neutral-900 text-left shadow-md hover:shadow-2xl flex flex-col justify-between border-2 border-amber-400/90 hover:border-brand-red hover:-translate-y-2 transition-all duration-300 relative group">
             <div>
-              <div className="text-center text-amber-400 text-base sm:text-lg mb-1">★★★★★</div>
+              <div className="text-center text-amber-400 text-base sm:text-lg mb-1 drop-shadow-xs">★★★★★</div>
               <img
                 src="https://i.ibb.co/zTsVg7pZ/bonus-01.webp"
                 alt="+50 Desenhos Natalinos para Colorir"
                 loading="lazy"
-                className="h-56 sm:h-64 w-full mx-auto mb-3 object-contain"
+                className="h-56 sm:h-64 w-full mx-auto mb-3 object-contain group-hover:scale-102 transition-transform"
               />
               <div className="flex justify-center mb-3">
-                <span className="bg-amber-400 text-neutral-900 px-3 sm:px-5 py-1 font-black text-xs sm:text-sm rounded-md shadow-xs">
+                <span className="bg-gradient-to-r from-amber-400 to-amber-500 text-neutral-900 px-4 py-1 font-black text-xs sm:text-sm rounded-full shadow-md">
                   🎁 BÔNUS #1
                 </span>
               </div>
               <h4 className="text-sm sm:text-base font-black mb-2 leading-snug text-brand-red">
                 +50 DESENHOS NATALINOS PARA COLORIR
               </h4>
-              <p className="text-xs sm:text-sm text-neutral-600 mb-4 leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-neutral-700 mb-4 leading-relaxed font-normal">
                 Uma coleção especial com mais de 50 desenhos natalinos para as crianças pintarem, desenvolverem a criatividade e entrarem no clima do Natal.
               </p>
             </div>
-            <div className="border-2 border-emerald-500/40 rounded-lg py-2 text-center text-xs sm:text-sm font-bold bg-emerald-50">
+            <div className="border-2 border-emerald-500/50 rounded-xl py-2.5 text-center text-xs sm:text-sm font-bold bg-emerald-50/90 shadow-2xs">
               Valor: <span className="line-through text-red-600 font-bold">R$ 14,90</span>{' '}
               <span className="text-[#00C853] font-black text-sm">GRÁTIS</span>
             </div>
           </div>
 
           {/* Bonus 2 */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl text-neutral-900 text-left shadow-xl flex flex-col justify-between border-2 border-amber-300">
+          <div className="bg-white p-5 sm:p-6 rounded-3xl text-neutral-900 text-left shadow-md hover:shadow-2xl flex flex-col justify-between border-2 border-amber-400/90 hover:border-brand-red hover:-translate-y-2 transition-all duration-300 relative group">
             <div>
-              <div className="text-center text-amber-400 text-base sm:text-lg mb-1">★★★★★</div>
+              <div className="text-center text-amber-400 text-base sm:text-lg mb-1 drop-shadow-xs">★★★★★</div>
               <img
                 src="https://i.ibb.co/sJttz1Lw/bonus-02.webp"
                 alt="+30 Artesanatos Natalinos para Recortar e Montar"
                 loading="lazy"
-                className="h-56 sm:h-64 w-full mx-auto mb-3 object-contain"
+                className="h-56 sm:h-64 w-full mx-auto mb-3 object-contain group-hover:scale-102 transition-transform"
               />
               <div className="flex justify-center mb-3">
-                <span className="bg-amber-400 text-neutral-900 px-3 sm:px-5 py-1 font-black text-xs sm:text-sm rounded-md shadow-xs">
+                <span className="bg-gradient-to-r from-amber-400 to-amber-500 text-neutral-900 px-4 py-1 font-black text-xs sm:text-sm rounded-full shadow-md">
                   🎁 BÔNUS #2
                 </span>
               </div>
               <h4 className="text-sm sm:text-base font-black mb-2 leading-snug text-brand-red">
                 +30 ARTESANATOS NATALINOS PARA RECORTAR E MONTAR
               </h4>
-              <p className="text-xs sm:text-sm text-neutral-600 mb-4 leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-neutral-700 mb-4 leading-relaxed font-normal">
                 Enfeites, personagens, guirlandas, máscaras, caixinhas e outras atividades práticas para estimular a criatividade e a coordenação motora.
               </p>
             </div>
-            <div className="border-2 border-emerald-500/40 rounded-lg py-2 text-center text-xs sm:text-sm font-bold bg-emerald-50">
+            <div className="border-2 border-emerald-500/50 rounded-xl py-2.5 text-center text-xs sm:text-sm font-bold bg-emerald-50/90 shadow-2xs">
               Valor: <span className="line-through text-red-600 font-bold">R$ 17,90</span>{' '}
               <span className="text-[#00C853] font-black text-sm">GRÁTIS</span>
             </div>
           </div>
 
           {/* Bonus 3 */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl text-neutral-900 text-left shadow-xl flex flex-col justify-between border-2 border-amber-300">
+          <div className="bg-white p-5 sm:p-6 rounded-3xl text-neutral-900 text-left shadow-md hover:shadow-2xl flex flex-col justify-between border-2 border-amber-400/90 hover:border-brand-red hover:-translate-y-2 transition-all duration-300 relative group">
             <div>
-              <div className="text-center text-amber-400 text-base sm:text-lg mb-1">★★★★★</div>
+              <div className="text-center text-amber-400 text-base sm:text-lg mb-1 drop-shadow-xs">★★★★★</div>
               <img
                 src="https://i.ibb.co/m5BSksvF/bonus-03.webp"
                 alt="+20 Histórias Natalinas Infantis"
                 loading="lazy"
-                className="h-56 sm:h-64 w-full mx-auto mb-3 object-contain"
+                className="h-56 sm:h-64 w-full mx-auto mb-3 object-contain group-hover:scale-102 transition-transform"
               />
               <div className="flex justify-center mb-3">
-                <span className="bg-amber-400 text-neutral-900 px-3 sm:px-5 py-1 font-black text-xs sm:text-sm rounded-md shadow-xs">
+                <span className="bg-gradient-to-r from-amber-400 to-amber-500 text-neutral-900 px-4 py-1 font-black text-xs sm:text-sm rounded-full shadow-md">
                   🎁 BÔNUS #3
                 </span>
               </div>
               <h4 className="text-sm sm:text-base font-black mb-2 leading-snug text-brand-red">
                 +20 HISTÓRIAS NATALINAS INFANTIS
               </h4>
-              <p className="text-xs sm:text-sm text-neutral-600 mb-4 leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-neutral-700 mb-4 leading-relaxed font-normal">
                 Histórias curtas e envolventes sobre amizade, generosidade, solidariedade e união familiar para ler em casa ou na sala de aula.
               </p>
             </div>
-            <div className="border-2 border-emerald-500/40 rounded-lg py-2 text-center text-xs sm:text-sm font-bold bg-emerald-50">
+            <div className="border-2 border-emerald-500/50 rounded-xl py-2.5 text-center text-xs sm:text-sm font-bold bg-emerald-50/90 shadow-2xs">
               Valor: <span className="line-through text-red-600 font-bold">R$ 19,90</span>{' '}
               <span className="text-[#00C853] font-black text-sm">GRÁTIS</span>
             </div>
           </div>
 
           {/* Bonus 4 */}
-          <div className="bg-white p-4 sm:p-5 rounded-2xl text-neutral-900 text-left shadow-xl flex flex-col justify-between border-2 border-amber-300">
+          <div className="bg-white p-5 sm:p-6 rounded-3xl text-neutral-900 text-left shadow-md hover:shadow-2xl flex flex-col justify-between border-2 border-amber-400/90 hover:border-brand-red hover:-translate-y-2 transition-all duration-300 relative group">
             <div>
-              <div className="text-center text-amber-400 text-base sm:text-lg mb-1">★★★★★</div>
+              <div className="text-center text-amber-400 text-base sm:text-lg mb-1 drop-shadow-xs">★★★★★</div>
               <img
                 src="https://i.ibb.co/67VcfXLw/bonus-04.webp"
                 alt="+35 Modelos de Lembrancinhas Natalinas para Imprimir"
                 loading="lazy"
-                className="h-56 sm:h-64 w-full mx-auto mb-3 object-contain"
+                className="h-56 sm:h-64 w-full mx-auto mb-3 object-contain group-hover:scale-102 transition-transform"
               />
               <div className="flex justify-center mb-3">
-                <span className="bg-amber-400 text-neutral-900 px-3 sm:px-5 py-1 font-black text-xs sm:text-sm rounded-md shadow-xs">
+                <span className="bg-gradient-to-r from-amber-400 to-amber-500 text-neutral-900 px-4 py-1 font-black text-xs sm:text-sm rounded-full shadow-md">
                   🎁 BÔNUS #4
                 </span>
               </div>
               <h4 className="text-sm sm:text-base font-black mb-2 leading-snug text-brand-red">
                 +35 MODELOS DE LEMBRANCINHAS NATALINAS PARA IMPRIMIR
               </h4>
-              <p className="text-xs sm:text-sm text-neutral-600 mb-4 leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-neutral-700 mb-4 leading-relaxed font-normal">
                 Porta-bombons, caixinhas, capas para pirulitos, marcadores de páginas, tags e embalagens para presentear no Natal.
               </p>
             </div>
-            <div className="border-2 border-emerald-500/40 rounded-lg py-2 text-center text-xs sm:text-sm font-bold bg-emerald-50">
+            <div className="border-2 border-emerald-500/50 rounded-xl py-2.5 text-center text-xs sm:text-sm font-bold bg-emerald-50/90 shadow-2xs">
               Valor: <span className="line-through text-red-600 font-bold">R$ 17,90</span>{' '}
               <span className="text-[#00C853] font-black text-sm">GRÁTIS</span>
             </div>
@@ -766,152 +764,276 @@ export default function App() {
       </section>
 
       {/* Section 10: Pricing Table */}
-      <section id="oferta" className="py-10 sm:py-14 px-4 bg-brand-red scroll-mt-6">
-        <h2 className="text-base xs:text-lg sm:text-2xl font-black text-center text-brand-gold mb-1 sm:mb-2 flex items-center justify-center gap-1.5 leading-snug">
-          <Clock className="size-4 sm:size-5 shrink-0" /> ÚLTIMA CHANCE — OFERTA TERMINA HOJE
+      <section id="oferta" className="py-12 sm:py-20 px-4 bg-gradient-to-b from-[#EEF7F2] via-[#F6FBF8] to-[#E5F2EB] border-b-2 border-emerald-200/90 scroll-mt-6">
+        <h2 className="text-xs sm:text-sm md:text-base font-black text-center text-brand-red mb-1 sm:mb-2 flex items-center justify-center gap-1.5 leading-snug uppercase tracking-wider">
+          <Clock className="size-4 sm:size-5 shrink-0 text-brand-red animate-pulse" /> ÚLTIMA CHANCE — OFERTA TERMINA HOJE
         </h2>
-        <p className="text-center text-xl xs:text-2xl sm:text-3xl font-black mb-8 sm:mb-10 text-white">
-          Escolha a opção ideal para você:
+        <p className="text-center text-2xl sm:text-3xl md:text-4xl font-black mb-8 sm:mb-12 text-neutral-900 tracking-tight">
+          Escolha o Kit com mais vantagens para você
         </p>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           {/* Basic Plan */}
-          <div className="bg-white p-5 sm:p-7 rounded-2xl shadow-lg border-2 border-gray-200 flex flex-col justify-between">
+          <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-xl hover:shadow-2xl border-2 border-neutral-300 hover:border-neutral-400 transition-all duration-300 flex flex-col justify-between relative group">
+            <div className="absolute top-0 left-10 right-10 h-1 bg-gradient-to-r from-neutral-200 via-neutral-300 to-neutral-200 rounded-full" />
             <div>
-              <h3 className="text-xl sm:text-2xl font-black text-center mb-1 text-brand-dark">PLANO BÁSICO</h3>
-              <p className="font-bold text-center text-sm sm:text-base mb-3 text-brand-dark">
-                +100 Atividades de Natal para Crianças de 3 a 7 Anos
-              </p>
-              <p className="text-xs sm:text-sm text-neutral-500 text-center mb-5">
-                Ideal para quem deseja atividades educativas e divertidas para entreter as crianças durante o Natal e as férias.
-              </p>
-              <ul className="space-y-2 mb-6">
-                {[
-                  '+100 Atividades de Natal',
-                  'Atividades para crianças de 3 a 7 anos',
-                  'Acesso vitalício',
-                  'Download imediato',
-                ].map((item) => (
-                  <li key={item} className="flex gap-2 items-start text-xs sm:text-sm text-brand-dark">
-                    <Check className="size-4 sm:size-5 text-brand-green shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
+              {/* Header */}
+              <div className="text-center pt-1">
+                <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-neutral-500 mb-1.5">
+                  KIT BÁSICO
+                </h3>
+                <p className="text-xs sm:text-sm text-red-500 font-semibold line-through">
+                  R$ 27,90
+                </p>
+                <div className="flex items-baseline justify-center gap-0.5 mt-0.5">
+                  <span className="text-base sm:text-lg font-bold text-neutral-800">R$</span>
+                  <span className="text-4xl sm:text-5xl font-black text-neutral-900 tracking-tight leading-none">
+                    10
+                  </span>
+                  <span className="text-xl sm:text-2xl font-bold text-neutral-900 leading-none">
+                    ,00
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-neutral-500 mt-2 font-medium">
+                  Pacote essencial para começar as atividades.
+                </p>
+              </div>
+
+              {/* Divider */}
+              <div className="w-full border-t border-gray-100 my-4 sm:my-5" />
+
+              {/* Items List with Dividers */}
+              <ul className="divide-y divide-gray-100 mb-6">
+                <li className="flex items-center gap-2.5 py-3 sm:py-3.5 text-xs sm:text-sm font-medium text-neutral-700">
+                  <Check className="size-4 shrink-0 text-emerald-600 stroke-[2.5]" />
+                  <span>+100 Atividades de Natal Prontas para Imprimir</span>
+                </li>
+                <li className="flex items-center gap-2.5 py-3 sm:py-3.5 text-xs sm:text-sm font-medium text-neutral-700">
+                  <Check className="size-4 shrink-0 text-emerald-600 stroke-[2.5]" />
+                  <span>Exercícios para crianças de 3 a 7 anos</span>
+                </li>
+                <li className="flex items-center gap-2.5 py-3 sm:py-3.5 text-xs sm:text-sm font-medium text-neutral-700">
+                  <Check className="size-4 shrink-0 text-emerald-600 stroke-[2.5]" />
+                  <span>Acesso imediato e vitalício</span>
+                </li>
+                <li className="flex items-center gap-2.5 py-3 sm:py-3.5 text-xs sm:text-sm font-medium text-neutral-700">
+                  <Check className="size-4 shrink-0 text-emerald-600 stroke-[2.5]" />
+                  <span>Arquivos digitais em PDF de alta qualidade</span>
+                </li>
+                <li className="flex items-center gap-2.5 py-3 sm:py-3.5 text-xs sm:text-sm font-medium text-neutral-400">
+                  <X className="size-4 shrink-0 text-red-500 stroke-[2.5]" />
+                  <span>4 Bônus exclusivos não inclusos</span>
+                </li>
               </ul>
             </div>
 
             <div>
-              <div className="text-center mb-4 pt-3 border-t border-gray-100">
-                <p className="text-xs sm:text-sm text-neutral-500 font-semibold">
-                  DE <span className="line-through text-red-600 font-bold">R$ 27,90</span> POR APENAS:
-                </p>
-                <p className="text-4xl sm:text-5xl font-black text-brand-dark tracking-tight my-1">R$ 14,90</p>
-                <p className="text-xs sm:text-sm text-neutral-500">ou 3x de R$5,32</p>
-              </div>
               <a
                 href="https://checkout.payt.com.br/a735af4971cfc7c1e31bc3cbe493485d"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-[#00C853] hover:bg-[#00B248] text-white font-black text-sm sm:text-base py-3.5 sm:py-4 rounded-full active:scale-95 transition-all shadow-lg shadow-green-600/30 cursor-pointer"
+                className="block w-full text-center bg-[#00C853] hover:bg-[#00B248] text-white font-black text-sm sm:text-base py-3.5 sm:py-4 rounded-xl sm:rounded-2xl active:scale-95 transition-all shadow-lg shadow-green-600/25 cursor-pointer"
               >
                 QUERO ACESSAR AGORA →
               </a>
+
+              {/* Compra Segura Badge */}
+              <div className="flex items-center justify-center gap-1.5 mt-3 text-emerald-600 font-extrabold text-[11px] sm:text-xs tracking-wide">
+                <ShieldCheck className="size-4 sm:size-5 text-emerald-500 shrink-0" />
+                <span>COMPRA SEGURA</span>
+              </div>
             </div>
           </div>
 
           {/* Complete Plan */}
-          <div className="bg-white text-brand-navy p-5 sm:p-7 rounded-2xl shadow-2xl border-4 border-amber-400 relative flex flex-col justify-between mt-4 md:mt-0">
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-400 text-neutral-900 px-4 py-1 rounded-full font-black text-xs sm:text-sm flex items-center gap-1 shadow-md whitespace-nowrap">
-              <Zap className="size-3.5 sm:size-4 text-brand-red fill-brand-red" /> MAIS VENDIDO
+          <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-2xl hover:shadow-3xl border-3 border-brand-red animate-pulse-border transition-all duration-300 relative flex flex-col justify-between mt-6 md:mt-0">
+            {/* Pill Badge at the top */}
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-red-600 via-rose-600 to-red-600 text-white px-6 py-1.5 rounded-full font-black text-xs sm:text-sm tracking-wider uppercase shadow-xl ring-2 ring-white whitespace-nowrap">
+              MAIS ESCOLHIDO
             </div>
 
             <div>
-              <p className="text-center text-brand-red font-black text-xs sm:text-sm mt-1 mb-2 flex items-center justify-center gap-1">
-                <Clock className="size-3.5 sm:size-4 text-brand-red" /> ÚLTIMA CHANCE — OFERTA TERMINA HOJE
-              </p>
-              <h3 className="text-2xl sm:text-3xl font-black text-center mb-1 text-brand-navy">PLANO COMPLETO</h3>
-              <p className="text-center font-bold text-sm sm:text-base mb-2 text-brand-navy">
-                Superkit Natal Mágico Infantil
-              </p>
-              <p className="text-xs sm:text-sm text-center mb-4 text-brand-navy/70 leading-relaxed">
-                A opção mais completa para quem deseja atividades, desenhos, artesanatos, histórias e lembrancinhas para aproveitar todo o período natalino.
-              </p>
+              {/* Header */}
+              <div className="text-center pt-2">
+                <h3 className="text-2xl sm:text-3xl font-black text-brand-red tracking-tight mb-0.5">
+                  Kit Completo
+                </h3>
+                <p className="text-xs sm:text-sm font-black text-[#00C853] uppercase tracking-wide">
+                  TUDO DO KIT BÁSICO <span className="text-[#00C853]">+4 BÔNUS</span>
+                </p>
+              </div>
 
-              <img
-                src="https://i.ibb.co/MK4YvCD/mockup-principal.webp"
-                alt="Superkit Natal Mágico Infantil"
-                loading="lazy"
-                decoding="async"
-                className="w-full max-w-xs sm:max-w-sm mx-auto mb-4 object-contain drop-shadow-md"
-              />
+              {/* Product Mockup */}
+              <div className="my-3">
+                <img
+                  src="https://i.ibb.co/MK4YvCD/mockup-principal.webp"
+                  alt="Superkit Completo Natal Mágico Infantil"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full max-w-xs sm:max-w-sm mx-auto object-contain drop-shadow-md"
+                />
+              </div>
 
-              <ul className="space-y-2 mb-4 text-xs sm:text-sm">
-                {[
-                  '+100 Atividades de Natal',
-                  'Atividades para crianças de 3 a 7 anos',
-                  'Arquivos digitais em PDF PREMIUM',
-                  'Material pronto para imprimir',
-                  'Acesso vitalício',
-                  'Download imediato',
-                ].map((item) => (
-                  <li key={item} className="flex gap-2 items-start text-brand-navy font-medium">
-                    <Check className="size-4 sm:size-5 text-[#00C853] shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-                {[
-                  'Bônus #1 — +50 Desenhos Natalinos para Colorir',
-                  'Bônus #2 — +30 Artesanatos Natalinos para Recortar e Montar',
-                  'Bônus #3 — +20 Histórias Natalinas Infantis',
-                  'Bônus #4 — +35 Modelos de Lembrancinhas Natalinas para Imprimir',
-                ].map((item) => (
-                  <li key={item} className="flex gap-2 items-start text-brand-navy font-bold">
-                    <Gift className="size-4 sm:size-5 text-amber-500 shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </li>
-                ))}
+              {/* Checklist with Dividers */}
+              <ul className="divide-y divide-gray-100 mb-4">
+                <li className="flex items-center gap-2.5 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-neutral-700">
+                  <Check className="size-4 shrink-0 text-emerald-600 stroke-[2.5]" />
+                  <span>+100 Atividades de Natal Prontas para Imprimir</span>
+                </li>
+                <li className="flex items-center gap-2.5 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-neutral-700">
+                  <Check className="size-4 shrink-0 text-emerald-600 stroke-[2.5]" />
+                  <span>Exercícios para crianças de 3 a 7 anos</span>
+                </li>
+                <li className="flex items-center gap-2.5 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-neutral-700">
+                  <Check className="size-4 shrink-0 text-emerald-600 stroke-[2.5]" />
+                  <span>Acesso imediato e vitalício</span>
+                </li>
+                <li className="flex items-center gap-2.5 py-2.5 sm:py-3 text-xs sm:text-sm font-medium text-neutral-700">
+                  <Check className="size-4 shrink-0 text-emerald-600 stroke-[2.5]" />
+                  <span>Impressão ilimitada em PDF de alta qualidade</span>
+                </li>
               </ul>
 
-              <div className="bg-amber-50 border-2 border-amber-300 rounded-xl p-2.5 my-3 text-center">
-                <span className="text-xs sm:text-sm font-black text-brand-red uppercase tracking-tight">
-                  🎁 POR APENAS R$ 10 A MAIS, VOCÊ RECEBE OS 4 BÔNUS!
-                </span>
+              {/* Bonus Section Divider */}
+              <div className="text-center my-3">
+                <p className="text-[#00C853] font-black text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-1">
+                  <span>BÔNUS INCLUSOS GRÁTIS</span>
+                  <span className="text-base font-bold leading-none">↓</span>
+                </p>
+              </div>
+
+              {/* 4 Bonus Cards */}
+              <div className="space-y-2 mb-5">
+                <div className="bg-[#FFFDF5] border border-amber-200/90 rounded-xl p-2.5 sm:p-3 flex items-center justify-between gap-2 shadow-2xs">
+                  <div className="flex items-center gap-2 text-left">
+                    <span className="text-base sm:text-lg leading-none" role="img" aria-hidden="true">🎁</span>
+                    <span className="font-bold text-xs sm:text-sm text-neutral-800 leading-snug">
+                      +50 Desenhos Natalinos para Colorir
+                    </span>
+                  </div>
+                  <div className="shrink-0 text-right whitespace-nowrap">
+                    <span className="text-red-500 line-through text-[11px] sm:text-xs font-semibold mr-1.5">
+                      R$ 14,90
+                    </span>
+                    <span className="text-[#00C853] font-black text-xs sm:text-sm">
+                      GRÁTIS
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-[#FFFDF5] border border-amber-200/90 rounded-xl p-2.5 sm:p-3 flex items-center justify-between gap-2 shadow-2xs">
+                  <div className="flex items-center gap-2 text-left">
+                    <span className="text-base sm:text-lg leading-none" role="img" aria-hidden="true">🎁</span>
+                    <span className="font-bold text-xs sm:text-sm text-neutral-800 leading-snug">
+                      +30 Artesanatos para Recortar e Montar
+                    </span>
+                  </div>
+                  <div className="shrink-0 text-right whitespace-nowrap">
+                    <span className="text-red-500 line-through text-[11px] sm:text-xs font-semibold mr-1.5">
+                      R$ 17,90
+                    </span>
+                    <span className="text-[#00C853] font-black text-xs sm:text-sm">
+                      GRÁTIS
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-[#FFFDF5] border border-amber-200/90 rounded-xl p-2.5 sm:p-3 flex items-center justify-between gap-2 shadow-2xs">
+                  <div className="flex items-center gap-2 text-left">
+                    <span className="text-base sm:text-lg leading-none" role="img" aria-hidden="true">🎁</span>
+                    <span className="font-bold text-xs sm:text-sm text-neutral-800 leading-snug">
+                      +20 Histórias Natalinas Infantis
+                    </span>
+                  </div>
+                  <div className="shrink-0 text-right whitespace-nowrap">
+                    <span className="text-red-500 line-through text-[11px] sm:text-xs font-semibold mr-1.5">
+                      R$ 19,90
+                    </span>
+                    <span className="text-[#00C853] font-black text-xs sm:text-sm">
+                      GRÁTIS
+                    </span>
+                  </div>
+                </div>
+
+                <div className="bg-[#FFFDF5] border border-amber-200/90 rounded-xl p-2.5 sm:p-3 flex items-center justify-between gap-2 shadow-2xs">
+                  <div className="flex items-center gap-2 text-left">
+                    <span className="text-base sm:text-lg leading-none" role="img" aria-hidden="true">🎁</span>
+                    <span className="font-bold text-xs sm:text-sm text-neutral-800 leading-snug">
+                      +35 Lembrancinhas para Imprimir
+                    </span>
+                  </div>
+                  <div className="shrink-0 text-right whitespace-nowrap">
+                    <span className="text-red-500 line-through text-[11px] sm:text-xs font-semibold mr-1.5">
+                      R$ 17,90
+                    </span>
+                    <span className="text-[#00C853] font-black text-xs sm:text-sm">
+                      GRÁTIS
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div>
-              <div className="text-center mb-4 pt-3 border-t border-brand-navy/10">
-                <p className="text-xs sm:text-sm text-brand-navy/70 font-semibold">
-                  DE <span className="line-through text-red-600 font-bold">R$ 57,90</span> POR APENAS:
+              {/* Pricing section */}
+              <div className="text-center mb-3">
+                <p className="text-xs sm:text-sm text-red-500 font-semibold line-through mb-0.5">
+                  R$ 67,00
                 </p>
-                <p className="text-4xl sm:text-6xl font-black text-[#00C853] tracking-tight my-1 drop-shadow-xs">R$ 24,90</p>
-                <p className="text-xs sm:text-sm text-brand-navy/70 font-bold">ou 6x de R$5,51</p>
+                <p className="text-xs sm:text-sm font-black text-brand-red uppercase tracking-widest mb-1">
+                  SOMENTE HOJE
+                </p>
+                <div className="flex items-baseline justify-center gap-0.5">
+                  <span className="text-lg sm:text-xl font-black text-[#00C853]">R$</span>
+                  <span className="text-5xl sm:text-6xl font-black text-[#00C853] tracking-tight leading-none">
+                    27
+                  </span>
+                  <span className="text-2xl sm:text-3xl font-black text-[#00C853] leading-none">
+                    ,00
+                  </span>
+                </div>
+
+                {/* Savings Pill */}
+                <div className="w-full bg-emerald-50 text-emerald-800 font-black text-xs sm:text-sm py-2 px-3 rounded-full border border-emerald-200 text-center mt-3 shadow-2xs">
+                  Você economiza R$ 40,00
+                </div>
               </div>
+
+              {/* Button CTA - Color & text preserved */}
               <a
                 href="https://checkout.payt.com.br/bb0528eaebdf5520889335d52d323882"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-[#00C853] hover:bg-[#00B248] text-white font-black text-base sm:text-lg md:text-xl py-4 sm:py-4.5 rounded-full active:scale-95 transition-all shadow-xl shadow-green-600/30 animate-pulse tracking-wide cursor-pointer"
+                className="block w-full text-center bg-[#00C853] hover:bg-[#00B248] text-white font-black text-base sm:text-lg md:text-xl py-4 sm:py-4.5 rounded-xl sm:rounded-2xl active:scale-95 transition-all shadow-xl shadow-green-600/30 animate-pulse tracking-wide cursor-pointer"
               >
                 QUERO ACESSAR AGORA  →
               </a>
+
+              {/* Compra Segura Badge */}
+              <div className="flex items-center justify-center gap-1.5 mt-3 text-emerald-600 font-extrabold text-[11px] sm:text-xs tracking-wide">
+                <ShieldCheck className="size-4 sm:size-5 text-emerald-500 shrink-0" />
+                <span>COMPRA SEGURA</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto text-center text-white/95 mt-8 sm:mt-10 text-xs sm:text-base md:text-lg px-2 leading-relaxed space-y-2">
+        <div className="max-w-3xl mx-auto text-center text-neutral-600 mt-8 sm:mt-12 text-xs sm:text-base md:text-lg px-2 leading-relaxed space-y-2">
           <p>
             Uma única atividade pode proporcionar vários minutos de diversão, aprendizado e criatividade.
           </p>
-          <p className="font-bold">
+          <p className="font-bold text-neutral-900">
             Agora imagine ter mais de 100 atividades, 50 desenhos, 30 artesanatos, 20 histórias e um kit de lembrancinhas para aproveitar durante todo o Natal.
           </p>
         </div>
       </section>
 
       {/* Section 11: Testimonials Carousel with Touch Swipe */}
-      <section className="py-10 sm:py-16 px-4 bg-[#F8FAF7]">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-center mb-2 text-brand-red leading-tight">
+      <section className="py-12 sm:py-18 px-4 bg-gradient-to-b from-[#FAF8F5] via-[#F4EFE8] to-[#EEE7DD] border-b border-stone-300/70">
+        <p className="text-xs sm:text-sm font-black tracking-widest text-[#00C853] uppercase mb-2 text-center">
+          EXPERIÊNCIAS REAIS
+        </p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-center mb-2 text-neutral-900 leading-tight">
           O QUE MÃES E PROFESSORAS DIZEM
         </h2>
         <p className="text-center text-xs sm:text-sm md:text-base text-neutral-600 mb-6 sm:mb-10 max-w-xl mx-auto font-medium">
@@ -931,7 +1053,7 @@ export default function App() {
             >
               {testimonials.map((item) => (
                 <div key={item.name} className="w-full shrink-0 px-1 sm:px-2">
-                  <div className="bg-white p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm border border-neutral-100 text-center">
+                  <div className="bg-white p-6 sm:p-10 rounded-3xl shadow-xl border border-stone-200/80 text-center relative">
                     <div className="flex justify-center gap-1 mb-4 text-amber-400">
                       {Array.from({ length: 5 }).map((_, i) => (
                         <Star
@@ -991,7 +1113,7 @@ export default function App() {
       </section>
 
       {/* Section 12: Guarantee */}
-      <section className="py-12 sm:py-20 px-4 bg-gradient-to-b from-[#F0F7FD] via-[#E5F2FC] to-[#F0F7FD] border-y border-sky-100 text-center relative overflow-hidden">
+      <section className="py-12 sm:py-20 px-4 bg-gradient-to-b from-[#F0F7FD] via-[#E2F1FC] to-[#EDF6FD] border-b border-sky-200/80 text-center relative overflow-hidden">
         <div className="max-w-3xl mx-auto bg-white/95 backdrop-blur-sm p-6 sm:p-10 rounded-3xl border border-sky-200/60 shadow-xl shadow-sky-950/5">
           <img
             src="https://i.ibb.co/gM5MkNFF/garantia.png"
@@ -1031,8 +1153,8 @@ export default function App() {
       </section>
 
       {/* Section 13: How Access Works (Step by Step) */}
-      <section className="py-10 sm:py-16 px-4 bg-[#F8FAF7] text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 sm:mb-4 text-brand-red leading-tight uppercase">
+      <section className="py-12 sm:py-18 px-4 bg-white border-b border-neutral-200/70 text-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 sm:mb-4 text-neutral-900 leading-tight uppercase">
           COMO FUNCIONA O ACESSO
           <br />
           <span className="text-amber-600 text-xl sm:text-2xl md:text-3xl font-black">(PASSO A PASSO SIMPLES)</span>
@@ -1041,14 +1163,14 @@ export default function App() {
           Compre com total segurança, receba na hora e imprima suas atividades de Natal sempre que precisar.
         </p>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-5">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {steps.map((step) => (
-            <div key={step.n} className="bg-white p-5 sm:p-7 rounded-xl sm:rounded-2xl shadow-sm border border-neutral-100 text-left flex flex-col justify-start">
-              <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-brand-red text-white text-lg sm:text-xl font-black mb-3 sm:mb-4 shadow">
+            <div key={step.n} className="bg-[#FAF9F6] p-6 sm:p-8 rounded-3xl shadow-md hover:shadow-2xl border border-neutral-200/90 hover:border-brand-red/40 hover:-translate-y-1.5 transition-all duration-300 text-left flex flex-col justify-start relative group">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-brand-red to-red-700 text-white text-lg sm:text-xl font-black mb-3.5 shadow-md group-hover:scale-105 transition-transform">
                 {step.n}
               </div>
               <p className="font-black text-neutral-900 text-base sm:text-lg mb-1">{step.t}</p>
-              {step.d && <p className="text-neutral-600 text-xs sm:text-sm mb-2">{step.d}</p>}
+              {step.d && <p className="text-neutral-600 text-xs sm:text-sm mb-2 leading-relaxed">{step.d}</p>}
               {step.bullets.length > 0 && (
                 <ul className="mt-2 space-y-1.5 sm:space-y-2">
                   {step.bullets.map((bullet) => (
@@ -1074,12 +1196,15 @@ export default function App() {
       </section>
 
       {/* Section 14: FAQ */}
-      <section className="py-10 sm:py-16 px-4 bg-white">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-center mb-6 sm:mb-8 text-brand-red uppercase">
+      <section className="py-12 sm:py-18 px-4 bg-gradient-to-b from-[#F2F7F4] via-[#EAF2ED] to-[#E3EDE7] border-b border-emerald-900/10">
+        <p className="text-xs sm:text-sm font-black tracking-widest text-[#00C853] uppercase mb-2 text-center">
+          TIRA-DÚVIDAS
+        </p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-center mb-6 sm:mb-10 text-neutral-900 uppercase">
           PERGUNTAS FREQUENTES
         </h2>
 
-        <div className="max-w-3xl mx-auto bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm border border-gray-100 divide-y divide-gray-100">
+        <div className="max-w-3xl mx-auto bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-emerald-200/70 divide-y divide-emerald-100/60">
           {faqs.map((faq, index) => (
             <details
               key={index}
@@ -1098,9 +1223,8 @@ export default function App() {
           ))}
         </div>
       </section>
-
       {/* Footer */}
-      <footer className="py-8 sm:py-12 px-4 bg-black text-center text-[11px] sm:text-xs text-white w-full">
+      <footer className="py-8 sm:py-12 px-4 bg-[#0E1A15] text-center text-[11px] sm:text-xs text-white w-full border-t border-emerald-900/50">
         <div className="max-w-3xl mx-auto space-y-2.5 leading-relaxed text-white">
           <p className="font-extrabold text-white text-xs sm:text-sm tracking-wide">
             Copyright © 2026 | Todos os direitos reservados.
@@ -1110,12 +1234,6 @@ export default function App() {
           </p>
           <p className="text-white/85">
             Todos os direitos sobre o produto digital “+100 Atividades de Natal para Crianças” são reservados, nos termos da Lei nº 9.610/98 — Lei de Direitos Autorais.
-          </p>
-          <p className="text-white/85">
-            É proibida a reprodução, distribuição, compartilhamento, revenda ou comercialização deste material, no todo ou em parte, sem autorização prévia.
-          </p>
-          <p className="text-white/85">
-            Este é um produto digital. Nenhum material físico será enviado.
           </p>
         </div>
       </footer>

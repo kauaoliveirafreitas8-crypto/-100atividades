@@ -66,3 +66,19 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+@keyframes pulse-border-subtle {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(196, 21, 28, 0.45), 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #C4151C;
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(196, 21, 28, 0.2), 0 25px 30px -5px rgba(196, 21, 28, 0.18);
+    border-color: #E11D48;
+  }
+}
+
+.animate-pulse-border {
+  animation: pulse-border-subtle 2.5s ease-in-out infinite;
+}
+
